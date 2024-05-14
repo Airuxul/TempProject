@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using AI.Task;
+using AI.HTN.Task;
 
-namespace AI
+namespace AI.HTN
 {
     public class HTNPlanner
     {
@@ -29,7 +29,7 @@ namespace AI
                 {
                     if (compoundTask.MetCondition(worldState))
                     {
-                        var subTask = compoundTask.VaildMethod.SubTasks;
+                        var subTask = compoundTask.ValidMethod.SubTasks;
                         foreach (var t in subTask)
                         {
                             _taskOfProcess.Push(t);

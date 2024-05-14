@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 
-namespace AI.Task
+namespace AI.HTN.Task
 {
     public enum ETaskStatus
     {
-        Ready,
-        Running,
-        Success,
-        Failure
+        Failure, 
+        Success, 
+        Running
     }
     
     public interface IBaseTask

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 
-namespace AI.Task
+namespace AI.HTN.Task
 {
     public class CompoundTask : IBaseTask
     {
-        public Method VaildMethod { get; private set; }
+        public Method ValidMethod { get; private set; }
         private readonly List<Method> _methods;
 
         public CompoundTask()
@@ -18,7 +18,7 @@ namespace AI.Task
             {
                 if (method.MetCondition(worldState))
                 {
-                    VaildMethod = method;
+                    ValidMethod = method;
                     return true;
                 }
             }

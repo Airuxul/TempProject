@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AI.Task
+namespace AI.HTN.Task
 {
     public abstract class PrimitiveTask : IBaseTask
     {
@@ -16,7 +16,7 @@ namespace AI.Task
             {
                 if (MetConditionOnPlan(worldState))
                 {
-                    MetConditionOnExecute();
+                    EffectOnPlan(worldState);
                     return true;
                 }
             }
@@ -41,7 +41,7 @@ namespace AI.Task
         
         public void Effect(Dictionary<string, object> worldState = null)
         {
-            throw new System.NotImplementedException();
+            EffectOnExecute();
         }
         
         protected virtual void EffectOnPlan(Dictionary<string, object> worldState) { }

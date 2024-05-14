@@ -1,15 +1,20 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using System.Runtime.InteropServices.ComTypes;
 
-namespace AI
+namespace AI.HTN
 {
+    public static class HTNWorldConst
+    {
+        public const string FOOD_STATE_KEY = "food";
+    }
+    
     public static class HTNWorld
     {
         private static readonly Dictionary<string, Func<object>> GetWorldState;
         private static readonly Dictionary<string, Action<object>> SetWorldState;
 
+        public static int FoodCount = 100;
+        
         static HTNWorld()
         {
             GetWorldState = new Dictionary<string, Func<object>>();

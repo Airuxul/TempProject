@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AI.Task
+namespace AI.HTN.Task
 {
     public class Method : IBaseTask
     {
